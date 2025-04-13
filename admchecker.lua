@@ -14,7 +14,7 @@ function main()
     loadAdminList()
     sampRegisterChatCommand("alo", showOnlineAdmins)
 
-    sampAddChatMessage("[ADMCheck] AdminChecker успішно завантажено. Список адмінів онлайн: {2E8B57}/alo", -1)
+    sampAddChatMessage("[ADMCheck] AdminChecker СѓСЃРїС–С€РЅРѕ Р·Р°РІР°РЅС‚Р°Р¶РµРЅРѕ. РЎРїРёСЃРѕРє Р°РґРјС–РЅС–РІ РѕРЅР»Р°Р№РЅ: {2E8B57}/alo", -1)
     wait(-1)
 end
 
@@ -27,7 +27,7 @@ function loadAdminList()
         end
         file:close()
     else
-        sampAddChatMessage("[ADMCheck] Файл adminlist.txt не знайдено!", 0xFF0000)
+        sampAddChatMessage("[ADMCheck] Р¤Р°Р№Р» adminlist.txt РЅРµ Р·РЅР°Р№РґРµРЅРѕ!", 0xFF0000)
     end
 end
 
@@ -46,12 +46,12 @@ function showOnlineAdmins()
     end
 
     if #onlineAdmins > 0 then
-        sampAddChatMessage("[ADMCheck] Адміністратори онлайн: ", 0xFFD700)
+        sampAddChatMessage("[ADMCheck] РђРґРјС–РЅС–СЃС‚СЂР°С‚РѕСЂРё РѕРЅР»Р°Р№РЅ: ", 0xFFD700)
         for _, admin in ipairs(onlineAdmins) do
             local message = string.format(" - %s {66CC66}id %d", admin.nick, admin.id)
             sampAddChatMessage(message, 0xFFFFFF)
         end
     else
-        sampAddChatMessage("[ADMCheck] Адміністрація {32CD32}відсутня{FFFFFF}. {32CD32}Можна веселитись!", -1)
+        sampAddChatMessage("[ADMCheck] РђРґРјС–РЅС–СЃС‚СЂР°С†С–СЏ {32CD32}РІС–РґСЃСѓС‚РЅСЏ{FFFFFF}. {32CD32}РњРѕР¶РЅР° РІРµСЃРµР»РёС‚РёСЃСЊ!", -1)
     end
 end
